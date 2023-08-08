@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e9e9e9;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+p {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.user-list {
+  /* width: auto; */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.user {
+  width: calc(100% / 3.5);
+}
+
+.user-card {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post-card {
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post-card__container {
+  padding: 2px 16px;
+}
+
+.back-btn {
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post {
+  border: 1px solid black;
+  background-color: white;
+  margin: 20px;
+}
+
+.post__title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding: 8px;
+}
+
+.post__title--skeleton {
+  width: 80px;
+  height: 12px;
+  background-color: lightgray;
+}
+
+.post__body {
+  padding: 0 8px;
+}
+
+.post__body--skeleton {
+  width: 100%;
+  height: 24px;
+  background-color: lightgray;
+}
+
+.post__search {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.post__search--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__search--label {
+  padding-right: 8px;
+}
+
+/* header */
+
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+ul {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+ul {
+  display: flex;
+  gap: 30px;
+}
+.header__img {
+  width: 100%; /* Set the desired width of the cropped image */
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  height: 120px; /* Set the desired height of the cropped image */
+  object-fit: cover; /* Crop the image to cover the container */
+}
+.movie__image {
+  /* height: 300px; */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* form */
+
+.form__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control {
+  padding: 20px;
+  width: 30%;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.form__top--wrapper {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.form--select {
+  /* width: 10px */
+  height: 30px;
+}
+.submit--button {
+  padding: 10px;
+  width: 20%;
+}
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  /* gap: 100px; */
+  align-items: center;
+  /* justify-content: center; */
+  margin: 0 auto;
+}
+
+/* CSS */
+.fixed-text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Show an ellipsis (...) when text overflows */
+}
+
+.user-card {
+  height: 20%;
+  /* max-height: 10%; */
+  margin: 20px;
+}
+
+.user-card__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--img {
+  height: 60%;
+  /* max-height: 60%; */
+  overflow: hidden;
+  object-fit: cover;
+}
+/*  
+
+SPINNER
+
+*/
+
+.fa-spinner {
+  animation: rotate 700ms infinite linear;
+}
+
+.movies__loading--spinner {
+  display: none !important;
+}
+
+/* .movies__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 48px 0;
+} */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.movies__loading {
+  display: block !important;
+  margin: 0 auto;
+
+  font-size: 60px;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px;
+  }
+}
