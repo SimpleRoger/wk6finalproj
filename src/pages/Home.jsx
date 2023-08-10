@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-
+import urname from "../assets/urname.jpeg"
 import axios from "axios";
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <img src="../assets/urname.jpeg" alt="myImage" class="header__img" />
+      <img src={urname} alt="myImage" class="header__img" />
       <div class="container">
         <div class="nav__wrapper">
           <h1>Roger's Movie Collection</h1>
