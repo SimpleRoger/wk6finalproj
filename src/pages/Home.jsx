@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import urname from "../assets/urname.jpeg"
+import urname from "../assets/urname.jpeg";
 import axios from "axios";
 
 const Home = () => {
@@ -31,58 +31,49 @@ const Home = () => {
   //map over users and show 10 cards
 
   return (
-    <div className="container">
+    <>
       <img src={urname} alt="myImage" class="header__img" />
-      <div class="container">
-        <div class="nav__wrapper">
-          <h1>Roger's Movie Collection</h1>
-          <ul>
-            <li>Home</li>
-            <li>Browse</li>
-            <li>Contact</li>
-          </ul>
+      <div className="container">
+        <div class="container">
+          <div class="nav__wrapper">
+            <h1>Roger's Movie Collection</h1>
+            <ul>
+              <li>Home</li>
+              <li>Browse</li>
+              <li>Contact</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <form
-        action=""
-        id="loginForm"
-        class="form__wrapper"
-        onSubmit={(e) => navigate(`search/${search}`)}
-      >
-        <div class="form__top--wrapper">
-          <h1>Search for your favourite movie</h1>
-          <select
-            class="form--select"
-            name=""
-            id="filter"
-            // onchange="filterMovies(event)"
-          >
-            <option value="" disabled selected>
-              Sort
-            </option>
-            <option value="OLD_TO_NEW">Date, Old to New</option>
-            <option value="NEW_TO_OLD">Date, New to Old</option>
-          </select>
-        </div>
-        <input
-          type="text"
-          id="username"
-          class="form-control"
-          placeholder="Your Favourite Movies..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button
-          class="submit--button"
-          type="submit"
-          // onSubmit={(e) => navigate(`/${e.target.value}`)}
+        <form
+          action=""
+          id="loginForm"
+          class="form__wrapper"
+          onSubmit={(e) => navigate(`search/${search}`)}
         >
-          Search
-        </button>
-      </form>
-      <div className="row">
-        <div className="user-list"></div>
+          <div class="form__top--wrapper">
+            <h1>Search for your favourite movie</h1>
+           
+          </div>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="Your Favourite Movies..."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button
+            class="submit--button"
+            type="submit"
+            // onSubmit={(e) => navigate(`/${e.target.value}`)}
+          >
+            Search
+          </button>
+        </form>
+        <div className="row">
+          <div className="user-list"></div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import BackButton from '../components/BackButton';
+import BackButton from "../components/BackButton";
 
 import axios from "axios";
 
@@ -33,6 +33,7 @@ const Posts = () => {
     <>
       <div className="post__search">
         <BackButton></BackButton>
+        <h2>Back to search</h2>
       </div>
       {/* {loading
         ?
@@ -45,21 +46,25 @@ const Posts = () => {
               </div>
             </div>
           )) */}
-      (
-      <div className="post" movie={movie.id}>
-        <div className="post__title">{movie.Title}</div>
-        {/* <p className="post__body">{movie.Plot}</p> */}
-        <img src={movie.Poster} alt="" />
-        <p>Year aired: {movie.Year}</p>
-        <p>Genre: {movie.Genre}</p>
-        <p>Rated: {movie.Rated}</p>
-        <p>Type: {movie.Type}</p>
-        <p>Runtime: {movie.Runtime}</p>
-        <p>Director: {movie.Director}</p>
-        <p>Actors: {movie.Actors}</p>
-        <p>Plot Summary: {movie.Plot}</p>
+      <div className="container">
+        <div className="post" movie={movie.id}>
+          <div class="header__image--wrapper">
+            <img src={movie.Poster} alt="" class="header__image" />
+          </div>
+          <div class="movie__info--wrapper">
+            <h1 className="post__title">{movie.Title}</h1>
+            {/* <p className="post__body">{movie.Plot}</p> */}
+            <h3>Year aired: {movie.Year}</h3>
+            <h3>Genre: {movie.Genre}</h3>
+            <h3>Rated: {movie.Rated}</h3>
+            <h3>Type: {movie.Type}</h3>
+            <h3>Runtime: {movie.Runtime}</h3>
+            <h3>Director: {movie.Director}</h3>
+            <h3>Actors: {movie.Actors}</h3>
+            <h3>Plot Summary: <p>{movie.Plot}</p></h3>
+          </div>
+        </div>
       </div>
-      ){/* } */}
     </>
   );
 };
