@@ -15,7 +15,7 @@ const Posts = () => {
   async function fetchPosts(userId) {
     setLoading(true);
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?apikey=18b5ee41&i=${id}`
+      `https://www.omdbapi.com/?apikey=18b5ee41&i=${id}`
     );
     setPosts(data);
     console.log(data);
