@@ -36,28 +36,15 @@ p {
 .user-list {
   /* width: auto; */
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  /* gap: 20px; */
   flex-wrap: wrap;
 }
 
-.user {
-  width: calc(100% / 3.5);
-}
 
-.user-card {
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
-  transition: 0.3s;
-  cursor: pointer;
-  border-radius: 10px;
-}
 
-.user-card:hover {
+
+.user-card__container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -183,7 +170,7 @@ ul {
   object-fit: cover; /* Crop the image to cover the container */
 }
 .movie__image {
-  /* height: 300px; */
+  height: 300px;
   width: 100%;
   overflow: hidden;
 }
@@ -224,6 +211,7 @@ ul {
   padding: 10px;
   width: 20%;
 }
+
 .user-list {
   display: flex;
   flex-wrap: wrap;
@@ -234,6 +222,9 @@ ul {
   margin: 0 auto;
 }
 
+.user__title {
+  text-align: center;
+}
 /* CSS */
 .fixed-text {
   white-space: nowrap; /* Prevent text from wrapping */
@@ -244,15 +235,27 @@ ul {
 .user-card {
   /* height: 20%; */
   /* max-height: 10%; */
-  width: 370px;
-  margin: 20px;
+  
 }
 
 .user-card__container {
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 360px;
+  height: 500px;
+  align-items: center;
+  margin: 20px;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
 }
 
@@ -261,6 +264,8 @@ ul {
   width: 70%;
   /* height: 60%; */
   /* max-height: 60%; */
+  margin: 0 auto;
+  text-align: center;
   overflow: hidden;
   object-fit: cover;
 }
@@ -295,6 +300,16 @@ SPINNER
   padding: 40px;
   margin: 0 auto;
   margin-top: 200px;
+}
+
+/* loading states */
+
+.movie {
+  width: 370px;
+  margin: 10px;
+  height: 530px;
+  /* margin: 20px; */
+  background-color: rgb(242,242,242);
 }
 
 .back__button {

@@ -35,8 +35,9 @@ const Posts = () => {
         <BackButton></BackButton>
         <h2>Back to search</h2>
       </div>
-      {/* {loading
-        ?
+      {
+      loading
+        ? 
             <div className="post" key={index}>
               <div className="post__title">
                 <div className="post__title--skeleton"></div>
@@ -45,7 +46,8 @@ const Posts = () => {
                 <p className="post__body--skeleton"></p>
               </div>
             </div>
-          )) */}
+          
+          : 
       <div className="container">
         <div className="post" movie={movie.id}>
           <div class="header__image--wrapper">
@@ -65,8 +67,8 @@ const Posts = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+}
+  </>
+  )
 
 export default Posts;
