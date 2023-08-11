@@ -37,7 +37,7 @@ const Home = () => {
     // console.log(search);
     setLoading(true);
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?apikey=18b5ee41&s=${event || search}`
+      `https://www.omdbapi.com/?apikey=18b5ee41&s=${event || search}`
     );
     //set data from useState hook
     // setSe(data);
