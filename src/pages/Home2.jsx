@@ -71,8 +71,7 @@ const Home = () => {
           <h1>Explore your movies</h1>
           <ul>
             <li onClick={() => navigate(`/`)}>Home</li>
-            <li>Browse</li>
-            <li>Contact</li>
+
           </ul>
         </div>
         <form
