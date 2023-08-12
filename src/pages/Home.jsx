@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import urname from "../assets/urname.jpeg";
+import { FaBars } from "react-icons/fa";
+
 import axios from "axios";
 
 const Home = () => {
@@ -38,9 +40,14 @@ const Home = () => {
           <div class="nav__wrapper">
             <h1>Roger's Movie Collection</h1>
             <ul>
-              <li>Home</li>
-              <li>Browse</li>
-              <li>Contact</li>
+              <li class="hamburger__menu">
+                <FaBars />
+              </li>
+              <div className="nav__links">
+                <li>Home</li>
+                <li>Browse</li>
+                <li>Contact</li>
+              </div>
             </ul>
           </div>
         </div>
@@ -52,7 +59,6 @@ const Home = () => {
         >
           <div class="form__top--wrapper">
             <h1>Search for your favourite movie</h1>
-           
           </div>
           <input
             type="text"

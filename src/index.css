@@ -23,12 +23,35 @@ h3 {
   width: 100%;
   max-width: 1200px;
 }
+.hamburger__menu {
+  display: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: 30px;
+}
 
 p {
   font-size: 14px;
   word-break: break-word;
 }
 
+
+/* home */
+
+.form__top--wrapper {
+  text-align: center;
+}
+
+.form-control {
+  min-width: 200px;
+}
+
+.submit--button {
+  min-width: 150px;
+  border-radius: 20px;
+}
 .hidden {
   display: none;
 }
@@ -40,6 +63,7 @@ p {
   /* gap: 20px; */
   flex-wrap: wrap;
 }
+
 
 
 
@@ -340,13 +364,11 @@ SPINNER
 }
 .header__image--skeleton {
   background-color: rgb(211,211,211);
+  margin-bottom:30px;
   width: 300px;
   height: 500px;
 }
 
-.post__title--skeleton {
-
-}
 
 @keyframes rotate {
   0% {
@@ -370,7 +392,7 @@ SPINNER
 
 @media (max-width: 1000px) {
   .header__image {
-    width: 600px;
+    width: 300px;
     margin-bottom: 50px;
   }
 }
